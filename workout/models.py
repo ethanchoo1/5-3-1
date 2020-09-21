@@ -24,7 +24,7 @@ LIFT_CHOICES = (
 
 class Lift(models.Model):
     Account = models.ForeignKey(Account, on_delete=models.CASCADE)
-    lift_name = models.CharField(choices=LIFT_CHOICES, default=SQUAT)
+    lift_name = models.CharField(max_length=15, choices=LIFT_CHOICES, default=SQUAT)
     reps = models.IntegerField()
     weight = models.IntegerField()
     def __str__(self):

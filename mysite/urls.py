@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', lambda r: HttpResponseRedirect('5-3-1/login/')),
-    path('5-3-1/' include('workout.urls'))
+    #path('', lambda r: HttpResponseRedirect('5-3-1/login/')),
+    path('5-3-1/', include('workout.urls')),
     path('admin/', admin.site.urls),
 ]
